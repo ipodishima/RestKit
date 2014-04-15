@@ -211,6 +211,10 @@ extern NSString * const RKResponseHasBeenMappedCacheUserInfoKey;
  */
 + (NSOperationQueue *)responseMappingQueue;
 
+@property (nonatomic, copy) void (^successBlock)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult);
+
+@property (nonatomic, copy) void (^failureBlock)(RKObjectRequestOperation *operation, NSError *error);
+
 @end
 
 ///--------------------
